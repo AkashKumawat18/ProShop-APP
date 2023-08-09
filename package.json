@@ -10,7 +10,8 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder.js",
-    "data:destroy": "node backend/seeder.js -d"
+    "data:destroy": "node backend/seeder.js -d",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend "
   },
   "author": "Akash Kumawat",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "concurrently": "^8.2.0",
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.1"
